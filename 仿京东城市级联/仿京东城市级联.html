@@ -1,0 +1,71 @@
+<link rel="stylesheet" href="./city-cascade.css">
+<script src="../static/citiesData.js"></script>
+<script src="./city-cascade.js"></script>
+
+<div id="dv" style="padding: 10px;">北京</div>
+
+<!-- <div class="city-cascade">
+  <div class="city-cascade-tab">
+    <div class="city-cascade-active">北京</div>
+    <div>北京市</div>
+    <div>海定区</div>
+  </div>
+  <table>
+    <tr>
+      <td>北京</td>
+      <td class="city-cascade-select">天津</td>
+      <td>上海</td>
+      <td>重庆</td>
+      <td>上海</td>
+      <td>天津</td>
+      <td>上海</td>
+    </tr>
+    <tr>
+      <td>北京</td>
+      <td>天津</td>
+      <td>上海</td>
+      <td>重庆</td>
+      <td>上海</td>
+      <td>天津</td>
+      <td>上海</td>
+    </tr>
+    <tr>
+      <td>北京</td>
+      <td>天津</td>
+      <td>上海</td>
+      <td>重庆</td>
+      <td>上海</td>
+      <td>天津</td>
+      <td>上海</td>
+    </tr>
+    <tr>
+      <td>北京</td>
+      <td>天津</td>
+      <td>上海</td>
+      <td>重庆</td>
+      <td>上海</td>
+      <td>天津</td>
+      <td>上海</td>
+    </tr>
+    <tr>
+      <td>北京</td>
+      <td>天津</td>
+      <td>上海</td>
+      <td>重庆</td>
+      <td>上海</td>
+      <td>天津</td>
+      <td>上海</td>
+    </tr>
+
+  </table>
+</div> -->
+
+<script>
+  cityCascade({
+    data: CITIES_DATA,
+    input: dv,
+    callback: function (data) {
+      console.log(data);
+    }
+  });
+</script>

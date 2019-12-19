@@ -1,0 +1,64 @@
+.city-cascade * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+.city-cascade::after,
+.city-cascade-tab::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.city-cascade {
+  position: absolute;
+  top: auto;
+  left: auto;
+  width: 600px;
+  height: auto;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.city-cascade-tab {
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #225f8c;
+}
+
+.city-cascade-tab>div[data-id] {
+  float: left;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.city-cascade table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.city-cascade td {
+  padding: 8px;
+  width: 20%;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.city-cascade td:hover {
+  background-color: #5bc0de;
+  color: #fff;
+}
+
+.city-cascade-active {
+  background-color: #225f8c;
+  color: #fff;
+}
+
+.city-cascade-select {
+  background-color: #5bc0de;
+  color: #fff;
+}
