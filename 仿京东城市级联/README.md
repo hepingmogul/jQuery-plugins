@@ -9,7 +9,7 @@
 
   <div id="dv" style="padding: 10px;">北京</div>
   ```
--js
+- js
   ```js
     // 调用方法
     cityCascade({

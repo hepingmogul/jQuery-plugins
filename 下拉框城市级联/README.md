@@ -11,7 +11,7 @@
     <select name="city" id="city"></select>
     <select name="area" id="area"></select>
   ```
--js
+- js
   ```js
     // 调用方法
     cityCascade({
