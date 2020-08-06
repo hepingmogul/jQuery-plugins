@@ -1,10 +1,13 @@
 <link rel="stylesheet" href="./city-cascade.css">
+
+<script src="../static/jquery-1.11.3/jquery.js"></script>
 <script src="../static/citiesData.js"></script>
-<script src="./city-cascade.js"></script>
 
-<div id="dv" style="padding: 10px;">北京</div>
+<div id="dv">北京</div>
 
-<!-- <div class="city-cascade">
+<br>
+
+<div class="city-cascade">
   <div class="city-cascade-tab">
     <div class="city-cascade-active">北京</div>
     <div>北京市</div>
@@ -58,14 +61,21 @@
     </tr>
 
   </table>
-</div> -->
+</div>
 
 <script>
-  cityCascade({
-    data: CITIES_DATA,
-    input: dv,
-    callback: function (data) {
-      console.log(data);
+  (function (jQuery) {
+
+    if (jQuery.fn) {
+      jQuery.fn.initCityCascade = function (options) {
+        options = options || {}
+        options.$container = $(this)
+        return new CityCascade(options)
+      }
     }
-  });
+  })(jQuery || {})
+
+  $(function () {
+
+  })
 </script>
