@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ebx</title>
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0, user-scalable=no,target-densitydpi=device-dpi,viewport-fit=cover">
+  <!-- 用在360中 -->
+  <meta name="renderer" content="webkit">
+  <!-- 用在其它 -->
+  <meta name="force-rendering" content="webkit">
+  <!-- 针对 IE 浏览器 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- 针对百度搜索 -->
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <meta name="author" content="阿平科技">
+  <meta name="description" content="阿平科技">
+  <meta name="keywords" content="阿平科技">
+  <meta name="generator" content="">
+  <meta name="robots" content="index,follow">
+  <meta name="referrer" content="origin-when-cross-origin">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <!-- <link rel="stylesheet" href="dist/pagination/pagination.min.css"> -->
+  <script src="dist/pagination/pagination.min.js"></script>
+</head>
+
+<body>
+  <div id="kuiPagination">
+    <!-- <div class="kui-pagination">
+      <div class="kui-pagination__cells">
+        <span class="kui-pagination__btn disable">首页</span>
+        <span class="kui-pagination__btn jsPaginationBtn">上一页</span>
+        <span class="kui-pagination__btn jsPaginationBtn">1</span>
+        <span class="kui-pagination__btn jsPaginationBtn active">2</span>
+        <span class="kui-pagination__btn jsPaginationBtn">3</span>
+        <span class="kui-pagination__btn jsPaginationBtn">4</span>
+        <span class="kui-pagination__btn jsPaginationBtn">5</span>
+        <span class="kui-pagination__btn">...</span>
+        <span class="kui-pagination__btn jsPaginationBtn">45</span>
+        <span class="kui-pagination__btn jsPaginationBtn">下一页</span>
+        <span class="kui-pagination__btn jsPaginationBtn">尾页</span>
+      </div>
+      <div class="kui-pagination__cells">
+        <div class="kui-pagination__info">
+          <span>共<span class="kui-pagination__text">45</span>页</span>
+          <span>共<span class="kui-pagination__text">1020</span>条记录</span>
+        </div>
+      </div>
+    </div> -->
+  </div>
+  <div id="kuiPagination2"></div>
+
+  <script>
+    window.onload = function () {
+      pagination.open({
+        container: '#kuiPagination',
+        // 总条数
+        total: 1020,
+        // 总页数
+        pages: Math.floor(1020 / 23),
+        // 每页条数
+        skip: 23,
+        // 当前得页面编号
+        count: 1,
+        // 回调
+        callback: function (x, y) {
+          console.log('x, y', x, y);
+        }
+      });
+
+      pagination.open({
+        container: '#kuiPagination2',
+        // 总条数
+        total: 1020,
+        // 总页数
+        pages: Math.floor(1020 / 23),
+        // 每页条数
+        skip: 23,
+        // 当前得页面编号
+        count: 1,
+        // 回调
+        callback: function (x, y) {
+          console.log('x, y', x, y);
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>

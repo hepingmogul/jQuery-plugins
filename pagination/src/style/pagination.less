@@ -1,0 +1,58 @@
+@color-primary: #337ab7;
+@border-default :1px solid #dddddd;
+@border-default-radius :4px;
+.kui-pagination {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    display: inline-block;
+    color: @color-primary;
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .kui-pagination__cells {
+        display: table;
+        float: left;
+        margin-right: 15px;
+    }
+    .kui-pagination__btn {
+        display: table-cell;
+        padding: 6px 10px;
+        border-top: @border-default;
+        border-bottom: @border-default;
+        border-right: @border-default;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    .kui-pagination__btn:first-child {
+        border-left: @border-default;
+        border-top-left-radius: @border-default-radius;
+        border-bottom-left-radius: @border-default-radius;
+    }
+    .kui-pagination__btn:last-child {
+        border-top-right-radius: @border-default-radius;
+        border-bottom-right-radius: @border-default-radius;
+    }
+    .kui-pagination__btn.active {
+        color: #ffffff;
+        border: @color-primary;
+        background-color: @color-primary;
+    }
+    .kui-pagination__btn.disable {
+        color: #808080;
+        background-color: #f5f5f5;
+        cursor: not-allowed;
+    }
+    .kui-pagination__info {
+        margin-top: 8px;
+        font-size: 14px;
+        color: #808080;
+    }
+    .kui-pagination__info~.kui-pagination__info {
+        margin-left: 10px;
+    }
+}
