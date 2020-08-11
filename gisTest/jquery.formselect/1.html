@@ -1,0 +1,48 @@
+<script src="./jquery.min.js"></script>
+<script src="formselect.js"></script>
+<link rel="stylesheet" href="formselect.css">
+<style>
+    .box-formselect,
+    .box-formselect * {
+        box-sizing: border-box;
+    }
+</style>
+
+<span data-id="formselect"></span>
+
+
+
+<!-- <div class="box-formselect">
+    <div class="tx-formselect">
+        <span data-text="formselect">全部道路等级</span>
+    </div>
+    <div class="options-formselect">
+        <div class="option-formselect formselect-active" data-value="all">全部道路等级</div>
+        <div class="option-formselect" data-value="42000">国道</div>
+        <div class="option-formselect" data-value="51000">省道</div>
+        <div class="option-formselect" data-value="41000">高速公路</div>
+        <div class="option-formselect" data-value="44000">城市主干路</div>
+    </div>
+</div> -->
+
+<script>
+    $('[data-id="formselect"]').initFormSelect(
+        {
+            list: [
+                { label: '全部道路等级', value: '' },
+                { label: '国道', value: '42000' },
+                { label: '省道', value: '51000' },
+                { label: '高速公路', value: '41000' },
+                { label: '城市主干路', value: '44000' }
+            ],
+            value: '',
+            callback: function (value, obj) {
+                console.log(
+                    value,
+                    obj
+                )
+            }
+        }
+    )
+
+</script>
